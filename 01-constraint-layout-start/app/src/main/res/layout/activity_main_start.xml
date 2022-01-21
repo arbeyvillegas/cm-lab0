@@ -8,13 +8,50 @@
 
     <ImageView
         android:id="@+id/imageView2"
-        android:layout_width="344dp"
-        android:layout_height="380dp"
+        android:layout_width="0dp"
+        android:layout_height="118dp"
         android:contentDescription="@string/placeholder"
         android:scaleType="centerCrop"
         android:src="@drawable/singapore"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/btnupload"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:text="@string/upload"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/btndiscard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/discard"
+        app:layout_constraintBaseline_toBaselineOf="@+id/btnupload"
+        app:layout_constraintEnd_toStartOf="@+id/btnupload" />
+
+    <TextView
+        android:id="@+id/tvcameraLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/camera"
+        app:layout_constraintBaseline_toBaselineOf="@+id/ptcameraType"
+        tools:layout_editor_absoluteX="72dp" />
+
+    <EditText
+        android:id="@+id/ptcameraType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="@string/camera_value"
+        app:layout_constraintStart_toEndOf="@+id/tvcameraLabel"
+        tools:layout_editor_absoluteY="288dp" />
 </android.support.constraint.ConstraintLayout>
